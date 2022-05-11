@@ -1,0 +1,181 @@
+//Alert---> muestra un mensaje al usuario en el navegador//
+/*alert('Esta es una alerta');
+console.log(alert('Esta es una alerta')); //undifined*/
+
+//Confirm---> muestra un mensaje el cual es usuario deberá aceptar o cancelar - retorna un boolean el cual podemos almacenar en una variable //
+/*confirm('¿Desea continuar en esta página');
+console.log(confirm('¿Desea continuar en esta página')); //Boolean - si acepta es true, si cancela es false*/
+
+//Prompt---> muestra un mensaje en el cual además el usuario puede escribir- retorna el mensaje que escribio el usuario y si no escribio nada retorna null //
+/*prompt('Escriba su nombre compelto');
+console.log(prompt('Escriba su nombre completo'));*/
+
+/*
+let nombres = ['Ceci', 'Nico', 'Juan']
+nombres.forEach(nombre => alert('hola ' + nombre));
+*/
+
+/*Realizar un script que permita sumar un array de números consecutivamente, 
+de forma que se sume el primer número con el segundo y lo imprima por consola. 
+Luego, tenemos que  tomar este resultado y sumarle el tercer numero, y asi hasta 
+terminar de recorrer el array:
+*/
+// let elementos = [1, 2, 4, 8];
+
+//let suma = 0;
+
+//Opción 1 //
+/*
+for (let i = 1; i < elementos.length; i++) {
+    suma += elementos[i];
+    console.log(alert(suma));
+}
+*/
+
+//Opción 2: //
+/*
+let sumaIteracion = num => {
+    suma += num;
+    console.log(suma)
+}
+
+elementos.forEach(sumaIteracion);
+*/
+
+//Opción 3 //
+/*
+function suma(array) {
+    let contador = array[0];
+    for(i = 1; i < elementos.length; i++) {
+        contador += array[i];
+        alert(contador);
+    }
+    
+}
+
+suma(elementos);
+*/
+
+//Solución de la profe //
+/*
+let acumulador = 0;
+
+elementos.forEach(num => {
+    acumulador += num;
+    console.log(acumulador);
+})
+
+//prompt() parseInt ans parseFloat//
+let anioNacimiento = parseFloat(prompt('¿Enqué año naciste?'));
+console.log(anioNacimiento);
+let anioActual = 2022;
+
+let edad = anioActual - anioNacimiento;
+console.log(edad);
+*/
+
+//confirm()//
+/*
+let mensaje = confirm('¿Desea comenzar el juego')
+
+console.log(mensaje)
+
+if(mensaje) {
+    alert('Comenzo el juego')
+} else {
+    alert('Que mala onda')
+}
+*/
+
+let titulo = document.querySelector("h1"); //Retorna la primera que coincida
+let titulos = document.querySelectorAll(".parrafo");
+let btnPrimario = document.getElementById("btn-primario");
+console.log(btnPrimario);
+
+
+
+/*--------------------document y window-------------------------------*/
+//defer in script js si el link ponemos en el head
+//Primer examen, caso práctico, hasta el tema de eventos - examen final e sun cuestionario que incluye código para analizar
+
+
+
+
+/*
+Grupo: 6
+
+Natalia Peralta Acosta
+Marcela Ramirez
+Fernanda Villacís
+Tania Lenis Gómez
+Francisco Cardenas
+*/
+//Math.random para la máquina //
+/*
+let opcionCompu = parseInt((Math.random()*3+1));
+let opcionUsuario = parseInt(prompt('Elija las opciones: Piedra(1), Tijera(2), Papel(3)'));
+
+let resultado = 'Todavia no se calculo';
+//let maxIntentos = 3;
+
+
+
+
+    if(opcionUsuario > 0 && opcionUsuario <= 3) {
+        if(opcionUsuario === opcionCompu) {
+            resultado = alert('Es un empate');
+        }
+        if(opcionUsuario === 1 && opcionCompu === 2) {
+            resultado = alert('Ganaste');
+        } if(opcionUsuario < opcionCompu) {
+            resultado = alert('Perdiste');
+        }
+    } else {
+        alert('Ingrese una opción válida')
+    };
+
+
+*/
+
+// 1 piedra
+// 2 papel
+// 3 tijera
+
+let scoring = {
+    "player": 0,
+    "machine": 0
+}
+
+let game = {
+    "1": {
+        "1": "draw",
+        "2": "machine",
+        "3": "player"
+    },
+    "2": {
+        "2": "draw",
+        "3": "machine",
+        "1": "player"
+    },
+    "3": {
+        "3": "draw",
+        "1": "machine",
+        "2": "player"
+    }
+}
+
+while((scoring.player + scoring.machine) <= 2){
+    let playerAnswer = prompt("elegi algo");
+    let random = Math.floor(Math.random()*3+1);
+Let result = game[playerAnswer][random]
+
+    if( result != 'draw') {
+        scoring[result]++;
+    }
+
+    alert(`Resultado parcial: \n jugador: ${scoring.player}, maquina: ${scoring.machine}`);
+}
+
+let winner = scoring.player > scoring.machine? 'gana jugador' : 'gana maquina';
+
+alert(winner);

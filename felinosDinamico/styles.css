@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: rgb(219, 219, 219);
+}
+
+.header{
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button{
+  position: absolute;
+  bottom: 20px;
+  left: 90%;
+  padding: 8px 16px;
+  background-color: rgb(19, 19, 19);
+  border-radius: 4px;
+  font-weight: 700;
+  color: aliceblue;
+  border-style: none;
+
+}
+
+h1 {
+  width: 100%;
+  padding: .5em 1em;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  color: grey;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 2em 10%;
+}
+
+.item {
+  width: 32em;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 2em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item h2 {
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+
+.item p{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+/* estilos para tema oscuro ---------------------------------------------------------------------------------------------- */
+/* los suigientes estilos son los que usaremos para aplicar el modo oscuro, ustedes deberán modificar los selectores para
+poder resolver el ejercicio */
+
+
+
+/*el color de fondo */
+
+  .dark{
+    background-color: rgb(39, 39, 39);
+  }
+
+  /*las modificaciones al titulo 'la familia de los felinos*/
+  .tituloOscuro{ 
+    background-color: rgb(19, 19, 19);
+    color: rgb(170, 170, 170);
+    border-color: black;
+  }
+  
+  
+  /*las modificaciones a los items*/
+  .itemOscuro{
+    background-color: rgb(19, 19, 19);
+    border-color: black;
+  }
+  
+  /*las modificaciones a los textos de los items y los titulos de ellos*/
+
+  .descripcionOscuro{
+    color: rgb(230, 230, 230);
+  }
+
+  .btnLight{
+    background-color: rgb(78, 125, 255);
+    border-radius: 4px;
+    color: aliceblue;
+  }
+

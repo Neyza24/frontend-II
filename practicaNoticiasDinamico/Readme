@@ -1,0 +1,17 @@
+link consigna : https://docs.google.com/document/d/1jrdhiOI-AhzjJbA9Y8q1RwwQ9mmaMW0D/edit
+
+Sitio de noticias
+En esta práctica, deberán resolver como equipo el siguiente desafío que consta de 4 requerimientos principales. Recurrirán a la división de tareas para lograr resolver el mismo dentro de los tiempos fijados.
+Consignas
+Crear un sitio de noticias desde 0. El mismo debe respetar las siguientes indicaciones:
+Requerimiento n.° 1
+El sitio debe estar previamente maquetado en un wireframe, pueden utilizar cualquier herramienta para esto ( Figma, Adobe XD, Paint/etc o incluso un dibujo en papel). El sitio debe tener 3 secciones principales: un header, un main donde estarán las noticias y un footer. Internamente en cada sección tienen libertad para la creación de sus componentes.
+
+Requerimiento n.° 2
+El HTML y el CSS deben reflejar lo estipulado en el boceto, los estilos pueden variar, pero el wireframe y el resultado final no pueden ser dos cosas distintas. Buscamos la coherencia entre lo planificado y lo desarrollado, sino el primer requerimiento no tendría sentido.
+Requerimiento n.° 3
+La parte dinámica de nuestro sitio (la creación de cada tarjeta para las noticias) debe estar basada en el listado JS que les brindamos a continuación. Este es un array de objetos que cdebe poder seguonsta de seis noticias. Pero a su vez, si el array crece y contiene más noticias, el sitio ir respondiendo y funcionando correctamente.
+
+Requerimiento n.° 4
+Estilos especiales 🎨
+En cuanto a lo visual, en el sitio se debe poder distinguir las noticias que son internacionales de las nacionales. Para ello, deberán crear alguna clase aplicable solamente a las noticias internacionales (validar utilizando la propiedad del objeto que aclara esto) para que los usuarios puedan identificar que las mismas no son exclusivas de Argentina.
